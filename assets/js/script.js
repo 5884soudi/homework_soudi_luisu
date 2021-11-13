@@ -22,23 +22,44 @@ $(function () {
     // })
 
     // 結果表示
-    $('.result').on('click', function () {
-        if ($('#player_name').val() !== 'select') {
-            $.each(numkey, function () {
-                if ($(this).val() !== '') {
-                    soudi.push($(this).val());
-                }
-            });
+    // let calculation;
+    // $('.result').on('click', function () {
+    //     if ($('#player_name').val() !== 'select') {
+    //         if ($('.result').hasClass('clicked') == true) {
+    //          //何もしない
+    //         }else {
 
-            let ttt =  soudi.reduce(function(sum,element){
-                return sum + element;
-            },0);
-            console.log(ttt);
-        }
+    //             $.each(numkey, function () {
+    //                 if ($(this).val() !== '') {
+    //                     soudi.push($(this).val());
+    //                     calculation = soudi.reduce(function (sum, element) {
+    //                         return sum + Number(element);
+    //                     }, 0);
 
+    //                 }
+    //             });
+
+    //             $('.total_score').text(calculation);
+    //             $('.result').addClass('clicked');
+
+    //         }
+
+
+
+    //     }   
+
+    // });
+    $('#player_name').change(function(){
+        let player = $(this).val();
+        
     })
+  
+
 
 });
+
+
+
 
 // スワイパー
 const swiper = new Swiper('.swiper', {

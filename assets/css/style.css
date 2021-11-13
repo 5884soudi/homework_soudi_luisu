@@ -108,6 +108,18 @@ header {
     transform: translateY(-20px) rotate(45deg);
     bottom: 0;
 }
+/* プレイヤー入力画面 */
+.player_input {
+    height: 90vh;
+    width: auto;
+    background-image: url(../img/golf_background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
 
 /* スワイパー */
 
