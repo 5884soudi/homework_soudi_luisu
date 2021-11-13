@@ -22,7 +22,7 @@ $(function () {
   // -----------------------------------------スコア計算を行うところ--------------------------------------！
   // 各プレーヤーの配列作り
   let players = {
-    soudi:[],
+    soudi:[1,2,3,4],
     dj:[],
     tiger:[],
     matuyama:[]
@@ -45,8 +45,6 @@ $(function () {
       $(this).val(score[index]);
     });
   })
-
-
   // ②ボタンが押されたら行われる作業！
   // ボタンを押したら計算＋配列に追加
   $('.result').on('click',function () {
@@ -57,12 +55,14 @@ $(function () {
         newScore.push(num);
       };
     });
+    // 古い配列を新しい配列で置き換えている
     players[player] = newScore;
+    // 新しい配列の合計を計算」する
     let ttt =  players[player].reduce(function(sum,element){
       return sum + element;
   },0);
   // 結果を表示
   $('.total_score').text(ttt);
-  console.log(players[player]);
+  // console.log(players[player]);
   });
 });
