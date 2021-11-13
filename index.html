@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -71,7 +72,7 @@
                 <div class="swiper-scrollbar"></div>
             </div>
         </div>
-        <div>
+        <div class="score">
             <table>
                 <caption>サザンリンクスGC</caption>
                 <tbody>
@@ -144,41 +145,37 @@
                         <td>6334</td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><select name="" id="">
-                            <option value="select">選択</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                        <td><select name="name" id="player_name">
+                            <option value="select">プレイヤー選択</option>
+                            <option value="soudi">ソウディ</option>
+                            <option value="dj">ダスティン・ジョンソン</option>
+                            <option value="tiger">タイガーウッズ</option>
+                            <option value="matuyama">松山英樹</option>
                         </select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><select name="" id=""></select></td>
-                        <td><p></p></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><input type="text" class="num"></td>
+                        <td><p class="total_score"></p></td>
                     </tr>
                 </tbody>
             </table>
+            <button class="result">結果</button>
+
         </div>
     </main>
     <footer>

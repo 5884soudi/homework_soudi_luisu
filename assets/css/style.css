@@ -112,7 +112,7 @@ header {
 /* スワイパー */
 
 .swiper {
-    width: 500px;
+    width: 700px;
     height: 700px;
 }
 
@@ -136,6 +136,13 @@ thead th {
 
 tbody td {
     border: solid 1px black;
+}
+tbody td input {
+    width: 20px;
+}
+
+.score {
+    display: flex;
 }
 
 /* フッター */
