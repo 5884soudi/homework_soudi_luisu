@@ -275,6 +275,9 @@ td {
     /* 背景色指定 */
     /* padding-left: 25px;         余白指定 */
 }
+.num {
+    text-align: center;
+}
 
 th::after {
     content: '';
@@ -307,12 +310,22 @@ tr {
     padding-top: 30px;
 }
 
+.total_score {
+    font-size: 20px;
+}
+
+
 /* 選択したら画像が出る部分 */
 
 .image {
     display: none;
     max-width: 100%;
-    height: auto;
+    height: 400px;
+    
+}
+
+r_name {
+    text-align: center;
 }
 
 .player_img {
