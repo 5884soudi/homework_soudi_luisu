@@ -21,10 +21,7 @@ $(function () {
         $('.inputPlayer').val('');
     });
 
-    //各プレイヤーの配列作り
-    let players = {};
-    let playerImage = {}
-    // スクロールさせない部分
+    // ----------スクロールさせない部分----------
     $(window).scrollTop(0);
     let target = $('h1').offset().top;
     $('.go').on('click',function () {
@@ -32,6 +29,9 @@ $(function () {
         $('body,html').animate({scrollTop:target},1000);
     })
 
+    //各プレイヤーの配列作り
+    let players = {};
+    let playerImage = {}
 
     //Goボタンを押したらnamaeのボックスから取得してセレクトボタンに追加する作業
     //goボタンを押す
@@ -48,15 +48,7 @@ $(function () {
         $(this).prop("disabled", true);
     })
 
-
-    //---
     
-        // soudi: 0,
-        // dj: 1,
-        // tiger: 2,
-        // matsuyama: 3
-    
-
     // プレーヤー箱とスコア箱の作成
     let player;
     let score;

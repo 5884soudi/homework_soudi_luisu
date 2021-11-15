@@ -39,13 +39,13 @@
             <div class="oya">
                 <input type="text" class="inputPlayer">
                 <button class="insert">プレイヤー入力</button>
-                <button class="go">Go!</button>
             </div>
-            
+            <button class="go btn-flat">Start!</button>
+
         </div>
         <h1>コースマップ</h1>
         <!-- Slider main container -->
-        <div class="main container">
+        <div class="main">
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
@@ -85,29 +85,29 @@
                 <caption class="score-top">サザンリンクスGC</caption>
                 <tbody>
                     <tr>
-                        <td>ホール</td>
-                        <td>１</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>１1</td>
-                        <td>１2</td>
-                        <td>１3</td>
-                        <td>１4</td>
-                        <td>１5</td>
-                        <td>１6</td>
-                        <td>１7</td>
-                        <td>１8</td>
+                        <th>ホール</th>
+                        <td>①</td>
+                        <td>②</td>
+                        <td>③</td>
+                        <td>④</td>
+                        <td>⑤</td>
+                        <td>⑥</td>
+                        <td>⑦</td>
+                        <td>⑧</td>
+                        <td>⑨</td>
+                        <td>⑩</td>
+                        <td>⑪</td>
+                        <td>⑫</td>
+                        <td>⑬</td>
+                        <td>⑭</td>
+                        <td>⑮</td>
+                        <td>⑯</td>
+                        <td>⑰</td>
+                        <td>⑱</td>
                         <td>total</td>
                     </tr>
                     <tr>
-                        <td>Par</td>
+                        <th>Par</th>
                         <td>4</td>
                         <td>4</td>
                         <td>5</td>
@@ -130,7 +130,7 @@
                         <td>72</td>
                     </tr>
                     <tr>
-                        <td>Yard</td>
+                        <th>Yard</th>
                         <td>345</td>
                         <td>365</td>
                         <td>515</td>
@@ -153,13 +153,15 @@
                         <td>6334</td>
                     </tr>
                     <tr>
-                        <td><select name="name" id="player_name">
+                        <th>
+                            <select name="name" id="player_name">
                                 <option value="select">プレイヤー選択</option>
                                 <!-- <option value="soudi">ソウディ</option>
                                 <option value="dj">ダスティン・ジョンソン</option>
                                 <option value="tiger">タイガーウッズ</option>
                                 <option value="matsuyama">松山英樹</option> -->
-                            </select></td>
+                            </select>
+                        </th>
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
@@ -184,7 +186,13 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="result">結果</button>
+            
+            <div class="container">
+                <button class="result btn-shine">結果</button>
+            </div>
+            
+            
+                
         </div>
         <div class="player_img">
             <img src="./assets/img/soudi-masters.jpeg" alt="" class="image on">
