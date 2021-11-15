@@ -183,6 +183,9 @@ tbody td input {
     display: flex;
     justify-content: center;
 }
+.score-top {
+    font-size: 20px;
+}
 
 
 /* 選択したら画像が出る部分 */
@@ -196,6 +199,16 @@ tbody td input {
     width: 600px;
     margin: 100px auto 100px;
 }
+/* 結果ボタンのところ */
+.result {
+    height: 70px;
+    margin-top: 85px;
+    margin-left: 12px;
+    border-radius: 50%;
+}
+
+
+
 
 /* フッター */
 

@@ -113,7 +113,12 @@ $(function () {
         console.log(players[player]);
     });
 
-
+    // 画像でたらスクロール其の②
+    let scoreTop = $('.score-top').offset().top;
+    $('#player_name').change(function () {
+        // $('body,html').removeClass('js-scroll-stop');
+        $('body,html').animate({scrollTop: scoreTop},1000);
+    })
 
 });
 
