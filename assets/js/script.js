@@ -9,7 +9,7 @@ document.getElementById('hamburger').addEventListener('click', function () {
 });
 
 $(function () {
-    
+
 
     // let soudi = [];
     // let dj = [];
@@ -69,7 +69,7 @@ $(function () {
         soudi: 0,
         dj: 1,
         tiger: 2,
-        matsuyama:3
+        matsuyama: 3
 
     }
 
@@ -96,7 +96,7 @@ $(function () {
             if ($(this).hasClass('on')) {
                 $(this).removeClass('on');
                 $(this).fadeOut(500);
-                
+
             }
 
             // playerで選ばれた番号をfadeIn、setTimeoutで時間差を置く
@@ -129,12 +129,24 @@ $(function () {
         console.log(players[player]);
     });
 
+    //Goボタンを押したらセレクトに名前が入る作業
+    //goボタンを押す
+    $('.insert').on('click', function () {
+        // $('#player_name').append(`<option value=${$('.inputPlayer').val()}>${$('.inputPlayer').val()}</option>`)
+        // タンスを作る
+        if ($('.inputPlayer').val() !== '') {
+            let namae = []
+            //タンスに書かれたやつが入る
+            namae.push($('.inputPlayer').val());
+            console.log(namae);
+        }
+        
+
+    })
+
 
 
 });
-var user = { name: 'soudi', age: 20 };
-console.log(user['name']);
-
 
 
 // スワイパー
