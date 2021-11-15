@@ -9,11 +9,13 @@ document.getElementById('hamburger').addEventListener('click', function () {
 });
 
 $(function () {
-    let soudi = [];
-    let dj = [];
-    let tiger = [];
-    let matu = []
-    let numkey = $('.num');
+    
+
+    // let soudi = [];
+    // let dj = [];
+    // let tiger = [];
+    // let matu = []
+    // let numkey = $('.num');
     // $('#hamburger').on('click',function(){
     //     $('#nav').addClass('in').toggleClass('in');
     //     $('#line1').addClass('line_1').toggleClass('line_1');
@@ -49,15 +51,89 @@ $(function () {
     //     }   
 
     // });
-    $('#player_name').change(function(){
-        let player = $(this).val();
-        
+    // $('#player_name').change(function(){
+    //     let player = $(this).val();
+
+    // })
+
+    //----------------------------------------------------------------------
+    //各プレイヤーの配列作り
+    let players = {
+        soudi: [],
+        dj: [],
+        tiger: [],
+        matsuyama: []
+    };
+    //---
+    let playerImage = {
+        soudi: 0,
+        dj: 1,
+        tiger: 2,
+        matsuyama:3
+
+    }
+
+    // プレーヤー箱とスコア箱の作成
+    let player;
+    let score;
+
+    // ①セレクトタグが変わったら行われる作業
+    $('#player_name').change(function () {
+        // resultを空にする
+        $('.total_score').text('');
+        // playerの取得
+        player = $(this).val();
+        // スコアの取得
+        score = players[player];
+        // 一個一個取り出してinputに出力
+        $('.num').each(function (index) {
+            $(this).val(score[index]);
+        });
+
+        // 選択したら画像が出る部分ーーーーーーーーーーーーーーーーーー
+        let playerName = $(this).val();
+        $('.image').each(function (index) {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on');
+                $(this).fadeOut(500);
+                
+            }
+
+            // playerで選ばれた番号をfadeIn、setTimeoutで時間差を置く
+            if (index == playerImage[playerName]) {
+                $(this).addClass('on');
+                setTimeout(function () {
+                    $('.image.on').fadeIn(1000);
+                }, 500)
+            }
+        });
     })
-  
+
+
+    // ②ボタンが押されたら行われる作業！
+    // ボタンを押したら計算＋配列に追加
+    $('.result').on('click', function () {
+        let newScore = [];
+        $('.num').each(function (index) {
+            if ($(this).val() != '') {
+                let num = Number($(this).val())
+                newScore.push(num);
+            };
+        });
+        players[player] = newScore;
+        let ttt = players[player].reduce(function (sum, element) {
+            return sum + element;
+        }, 0);
+        // 結果を表示
+        $('.total_score').text(ttt);
+        console.log(players[player]);
+    });
+
 
 
 });
-
+var user = { name: 'soudi', age: 20 };
+console.log(user['name']);
 
 
 

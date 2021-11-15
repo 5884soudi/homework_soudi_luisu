@@ -36,7 +36,10 @@
     </header>
     <main>
         <div class="player_input">
-            
+            <div class="oya">
+                <input type="text" class="inputPlayer">
+                <button class="insert">Go!</button>
+            </div>
         </div>
         <h1>コースマップ</h1>
         <!-- Slider main container -->
@@ -149,12 +152,12 @@
                     </tr>
                     <tr>
                         <td><select name="name" id="player_name">
-                            <option value="select">プレイヤー選択</option>
-                            <option value="soudi">ソウディ</option>
-                            <option value="dj">ダスティン・ジョンソン</option>
-                            <option value="tiger">タイガーウッズ</option>
-                            <option value="matuyama">松山英樹</option>
-                        </select></td>
+                                <option value="select">プレイヤー選択</option>
+                                <option value="soudi">ソウディ</option>
+                                <option value="dj">ダスティン・ジョンソン</option>
+                                <option value="tiger">タイガーウッズ</option>
+                                <option value="matsuyama">松山英樹</option>
+                            </select></td>
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
@@ -173,12 +176,19 @@
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
                         <td><input type="text" class="num"></td>
-                        <td><p class="total_score"></p></td>
+                        <td>
+                            <p class="total_score"></p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <button class="result">結果</button>
-
+        </div>
+        <div class="player_img">
+            <img src="./assets/img/soudi-masters.jpeg" alt="" class="image on">
+            <img src="./assets/img/Dustin-Johnson.jpeg" alt="" class="image">
+            <img src="./assets/img/taiger-masters.jpeg" alt="" class="image">
+            <img src="./assets/img/matsuyama_masters.jpeg" alt="" class="image">
         </div>
     </main>
     <footer>
