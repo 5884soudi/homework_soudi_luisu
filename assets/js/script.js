@@ -9,69 +9,46 @@ document.getElementById('hamburger').addEventListener('click', function () {
 });
 
 $(function () {
+    //入力ボタンを押したらnamaeのボックスに名前が入る作業
+    //入力ボタンを押す
+    let namae = [];
+    $('.insert').on('click', function () {
+        if ($('.inputPlayer').val() !== '') {
+            //タンスに書かれたやつが入る
+            namae.push($('.inputPlayer').val());
+            console.log(namae);
+        }
+        $('.inputPlayer').val('');
+    });
 
-
-    // let soudi = [];
-    // let dj = [];
-    // let tiger = [];
-    // let matu = []
-    // let numkey = $('.num');
-    // $('#hamburger').on('click',function(){
-    //     $('#nav').addClass('in').toggleClass('in');
-    //     $('#line1').addClass('line_1').toggleClass('line_1');
-    //     $('#line2').addClass('line_2').toggleClass('line_2');
-    //     $('#line3').addClass('line_3').toggleClass('line_3');
-    // })
-
-    // 結果表示
-    // let calculation;
-    // $('.result').on('click', function () {
-    //     if ($('#player_name').val() !== 'select') {
-    //         if ($('.result').hasClass('clicked') == true) {
-    //          //何もしない
-    //         }else {
-
-    //             $.each(numkey, function () {
-    //                 if ($(this).val() !== '') {
-    //                     soudi.push($(this).val());
-    //                     calculation = soudi.reduce(function (sum, element) {
-    //                         return sum + Number(element);
-    //                     }, 0);
-
-    //                 }
-    //             });
-
-    //             $('.total_score').text(calculation);
-    //             $('.result').addClass('clicked');
-
-    //         }
-
-
-
-    //     }   
-
-    // });
-    // $('#player_name').change(function(){
-    //     let player = $(this).val();
-
-    // })
-
-    //----------------------------------------------------------------------
     //各プレイヤーの配列作り
-    let players = {
-        soudi: [],
-        dj: [],
-        tiger: [],
-        matsuyama: []
-    };
-    //---
-    let playerImage = {
-        soudi: 0,
-        dj: 1,
-        tiger: 2,
-        matsuyama: 3
+    let players = {};
+    let playerImage = {}
 
-    }
+
+    //Goボタンを押したらnamaeのボックスから取得してセレクトボタンに追加する作業
+    //goボタンを押す
+    $('.go').on('click', function () {
+        // namae.each(function(){
+        //     $('#player_name').append(`<option value = ${$(this)}>${$(this)}</option>`)
+        // })　//配列の繰り返し文はjQueryではないので普通にfor文にする
+        for (var i = 0; i < namae.length; i++) {
+            $('#player_name').append(`<option value = ${namae[i]}>${namae[i]}</option>`)
+            players[namae[i]] = [];
+            playerImage[namae[i]] = i;
+        }
+        console.log(players);
+        $(this).prop("disabled", true);
+    })
+
+
+    //---
+    
+        // soudi: 0,
+        // dj: 1,
+        // tiger: 2,
+        // matsuyama: 3
+    
 
     // プレーヤー箱とスコア箱の作成
     let player;
@@ -128,21 +105,6 @@ $(function () {
         $('.total_score').text(ttt);
         console.log(players[player]);
     });
-
-    //Goボタンを押したらセレクトに名前が入る作業
-    //goボタンを押す
-    $('.insert').on('click', function () {
-        // $('#player_name').append(`<option value=${$('.inputPlayer').val()}>${$('.inputPlayer').val()}</option>`)
-        // タンスを作る
-        if ($('.inputPlayer').val() !== '') {
-            let namae = []
-            //タンスに書かれたやつが入る
-            namae.push($('.inputPlayer').val());
-            console.log(namae);
-        }
-        
-
-    })
 
 
 

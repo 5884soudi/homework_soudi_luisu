@@ -117,7 +117,7 @@ header {
     background-image: url(../img/golf_background.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
