@@ -10,6 +10,13 @@ document.getElementById('hamburger').addEventListener('click', function () {
 
 $(function () {
 
+    // スクロールさせない部分
+    $(window).scrollTop(0);
+    let target = $('h1').offset().top;
+    $('.go').on('click',function () {
+        $('body,html').removeClass('js-scroll-stop');
+        $('body,html').animate({scrollTop:target},1000);
+    })
 
     // let soudi = [];
     // let dj = [];
