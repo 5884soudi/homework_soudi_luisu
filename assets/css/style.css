@@ -157,6 +157,7 @@ img {
 h1 {
     font-size: 30px;
     margin: 10px;
+    padding-top: 100px
 }
 
 table {
@@ -205,4 +206,9 @@ footer {
     padding: 20px 0;
     margin-top: 100px;
     font-size: 20px;
+}
+
+/* utility */
+.js-scroll-stop{
+    overflow-y: hidden;
 }

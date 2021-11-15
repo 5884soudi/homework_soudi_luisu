@@ -24,6 +24,13 @@ $(function () {
     //各プレイヤーの配列作り
     let players = {};
     let playerImage = {}
+    // スクロールさせない部分
+    $(window).scrollTop(0);
+    let target = $('h1').offset().top;
+    $('.go').on('click',function () {
+        $('body,html').removeClass('js-scroll-stop');
+        $('body,html').animate({scrollTop:target},1000);
+    })
 
 
     //Goボタンを押したらnamaeのボックスから取得してセレクトボタンに追加する作業
