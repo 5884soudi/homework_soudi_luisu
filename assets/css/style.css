@@ -392,3 +392,78 @@ footer {
 .js-scroll-stop {
     overflow-y: hidden;
 }
+
+/* -------------------- レスポンシブ　----------------- */
+@media screen and (max-width:780px) {
+    #allTop {
+        font-size: 30px;
+    }
+
+    .oya {
+        top: 200px;
+        left: 100px;
+    }
+
+    .btn-flat {
+        position: absolute; top: 238px; left: 220px;
+        padding: 10px 40px;
+    }
+
+    .score {
+        /* overflow: hidden; */
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    th::after{
+        display: none;
+    }
+
+    .score-top {
+        font-size: 30px;
+        width: 300px;
+    }
+
+    tbody {
+        width: 400px;
+    }
+
+    td {
+        padding: 2px;
+    }
+
+    .container {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .btn-shine {
+    }
+
+    #nav {
+        position: absolute;
+        height: 100vh;
+        width: 100px;
+        left: -100px;
+        top: 0;
+        background: #ffffff;
+        transition: .7s;
+    }
+    
+    #nav ul li {
+        font-size: 10px;
+    }
+
+    .inputPlayer {
+        height: 30px;
+        width: 250px;
+    }
+
+    .player_img {
+        width: 300px;
+    }
+    
+}
